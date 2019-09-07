@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request, url_for
 from flask_dropzone import Dropzone
 from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 from flask_mail import Mail, Message
@@ -8,18 +8,30 @@ import os
 app = Flask(__name__)
 dropzone = Dropzone(app)
 mail = Mail()
+filename = None
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+app.config.update(
+    UPLOADED_PATH=os.path.join(dir_path, 'static'),
+    # Flask-Dropzone config:
+    DROPZONE_ALLOWED_FILE_TYPE='image',
+    DROPZONE_MAX_FILE_SIZE=3,
+    DROPZONE_MAX_FILES=1
+)
+app.config['DROPZONE_REDIRECT_VIEW'] = 'paint'
 
 # Dropzone settings
-app.config['DROPZONE_UPLOAD_MULTIPLE'] = False
-app.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
-app.config['DROPZONE_ALLOWED_FILE_TYPE'] = 'image/*'
-#app.config['DROPZONE_REDIRECT_VIEW'] = 'results'
-app.config['DROPZONE_MAX_FILES'] = 1
+#app.config['DROPZONE_UPLOAD_MULTIPLE'] = False
+#app.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
+#app.config['DROPZONE_ALLOWED_FILE_TYPE'] = 'image/*'
+#app.config['DROPZONE_REDIRECT_VIEW'] = 'paint'
+#app.config['DROPZONE_MAX_FILES'] = 1
 # Uploads settings
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
-photos = UploadSet('photos', IMAGES)
-configure_uploads(app, photos)
-patch_request_class(app)  # set maximum file size, default is 16MB
+#app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
+#photos = UploadSet('photos', IMAGES)
+#configure_uploads(app, photos)
+#patch_request_class(app)  # set maximum file size, default is 16MB
 
 app.secret_key = 'development key'
 
@@ -31,19 +43,21 @@ app.config["MAIL_PASSWORD"] = '*********'
 
 mail.init_app(app)
 
-
 @app.route('/')
-@app.route('/index')
-def index():
-    return render_template('index1.html')
+@app.route('/main' , methods=['POST', 'GET'])
+def main():
+    global filename
+    file = None
+    if request.method == 'POST':
+        f = request.files.get('file')
+        file = f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
+        filename = f.filename
+    return render_template('main.html')
+
 
 @app.route('/results')
 def results():
     return render_template('results.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
 
 @app.route('/github')
 def github():
@@ -52,6 +66,20 @@ def github():
 @app.route('/contactus')
 def contactus():
     return redirect('https://github.com/7-B/yoco')
+
+@app.route('/makeMeme', methods=['POST', 'GET'])
+def makeMeme():
+    global filename
+    return render_template("makeMeme.html", file_name = filename)
+
+@app.route('/color')
+def color():
+    return render_template('colorbook.html')
+
+@app.route('/painting')
+def paint():
+    global filename
+    return render_template('painting.html', file_name = filename)
 
 @app.route("/email", methods=['post', 'get'])
 def email_test():
@@ -88,3 +116,5 @@ def send_email(senders, receiver, content):
     finally:
         pass
 
+
+app.run(host='0.0.0.0', debug='True')

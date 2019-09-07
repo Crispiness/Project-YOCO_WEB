@@ -1,0 +1,11 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+Traceback (most recent call last):
+  File "app.py", line 120, in <module>
+    app.run(host='0.0.0.0', debug='True')
+  File "/home/pirl/anaconda3/envs/venv/lib/python3.7/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/home/pirl/anaconda3/envs/venv/lib/python3.7/site-packages/werkzeug/serving.py", line 987, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
