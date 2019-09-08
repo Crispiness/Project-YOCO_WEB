@@ -1,6 +1,6 @@
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request
 from flask_dropzone import Dropzone
-from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
+#from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 from flask_mail import Mail, Message
 
 import os
@@ -115,6 +115,3 @@ def send_email(senders, receiver, content):
         pass
     finally:
         pass
-
-
-app.run(host='0.0.0.0', debug='True')

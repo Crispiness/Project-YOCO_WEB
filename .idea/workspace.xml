@@ -1,42 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adec22bc-9767-4b01-b6c9-b830b3fac778" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/huebee" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/huebee.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/huebee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nohup.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/aa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/colorbook.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/flat_design_colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/flat_design_colors_full.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/huebee.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/huebee.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/colorbook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/huebee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/huebee.pkgd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/huebee.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/colorbook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/makeMeme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/painting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/upload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wsgi.py" afterDir="false" />
+    <list default="true" id="adec22bc-9767-4b01-b6c9-b830b3fac778" name="Default Changelist" comment="klxzcxnz[z&#10;[ck[posakcposam[soama">
+      <change afterPath="$PROJECT_DIR$/fabfile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskapp.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.json" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1QHEbL834hFXHyBNBb5e5rXxTex" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
