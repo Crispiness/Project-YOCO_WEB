@@ -1,9 +1,9 @@
+import os
 from flask import Flask, render_template, redirect, request
 from flask_dropzone import Dropzone
 #from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 from flask_mail import Mail, Message
 
-import os
 
 app = Flask(__name__)
 dropzone = Dropzone(app)
@@ -115,3 +115,6 @@ def send_email(senders, receiver, content):
         pass
     finally:
         pass
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8000)
