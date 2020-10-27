@@ -6,7 +6,7 @@ certifi==2019.6.16
 cffi==1.12.3
 Click==7.0
 clize==3.0
-cryptography==2.7
+cryptography==3.2
 debtcollector==0.10.0
 Fabric3==1.14.post1
 Flask==1.1.1
