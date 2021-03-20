@@ -18,7 +18,7 @@ Flask-Uploads==0.2.1
 funcsigs==0.4
 iso8601==0.1.11
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 MarkupSafe==0.23
 monotonic==0.4
 msgpack-python==0.4.6
