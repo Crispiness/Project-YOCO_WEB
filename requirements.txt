@@ -29,7 +29,7 @@ oslo.context==0.8.0
 oslo.i18n==2.7.0
 oslo.log==1.13.0
 oslo.serialization==1.11.0
-oslo.utils==2.7.0
+oslo.utils==4.10.1
 paramiko==2.6.0
 pbr==1.8.1
 PIL==1.1.7
